@@ -25,7 +25,7 @@ const WebNavbar = styled.div`
     color: white;
     font-size: 1.5rem;
 
-    p.logo {
+    div.logo {
 
         display: flex;
         align-items: center;
@@ -38,7 +38,7 @@ const WebNavbar = styled.div`
             border-radius: 50%;
         }
 
-        p{
+        p {
             margin-left: 1rem;
             font-weight: 700;
         }
@@ -74,10 +74,10 @@ const Navbar: React.FC<{}> = () => {
             <HtmlNavbar>
                 <WebNavbar>
                     <Link to='/home'>
-                        <p className='logo'>
+                        <div className='logo'>
                             <img src={logo} alt='logo' />
-                            <p> VET APP </p>
-                        </p>
+                            <p> WEBAPP VET </p>
+                        </div>
                     </Link>
                     <ul>
                         <li>
@@ -101,12 +101,12 @@ const Navbar: React.FC<{}> = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/schedule'>
+                            <Link to='/appointments'>
                                 <WebNavbarItem
-                                    onClick={() => handleItemClick("horario")}
-                                    $active={activeItem === "horario"}
+                                    onClick={() => handleItemClick("citas")}
+                                    $active={activeItem === "citas"}
                                 >
-                                    Horario
+                                    Citas
                                 </WebNavbarItem>
                             </Link>
                         </li>
@@ -121,9 +121,7 @@ const Navbar: React.FC<{}> = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div>
-
-                    </div>
+                    <div></div>
                 </WebNavbar>
             </HtmlNavbar>
         </>
